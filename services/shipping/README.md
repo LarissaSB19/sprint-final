@@ -33,7 +33,7 @@ Antes de executar a aplicação é necessário atualizar as informações do arq
 ````js
 RABBITMQ_LOGIN          = guest 
 RABBITMQ_PASSWORD       = guest
-RABBITMQ_HOST           = localhost
+RABBITMQ_HOST           = q-rabbitmq
 RABBITMQ_PORT           = 5672
 RABBITMQ_VHOST          = 
 RABBITMQ_QUEUE_NAME     = shipping //nome da fila de onde ira consumir a informaçào
