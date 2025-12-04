@@ -1,6 +1,6 @@
 # Fraud Service
 
-Service Este projeto corresponde a uma aplicação que recebe notificações de transações e realiza validações para identificar possíveis fraudes. O serviço consome mensagens de uma fila RabbitMQ e aplica regras de negócio para verificar inconsistências nos dados do cliente e da compra. Estrutura esperada da mensagem recebida: 
+Este projeto corresponde a uma aplicação que recebe notificações de transações e realiza validações para identificar possíveis fraudes. O serviço consome mensagens de uma fila RabbitMQ e aplica regras de negócio para verificar inconsistências nos dados do cliente e da compra. Estrutura esperada da mensagem recebida: 
 
 ```Json
 {
@@ -26,4 +26,5 @@ Service Este projeto corresponde a uma aplicação que recebe notificações de 
         "state": "DF"
     }
 }
+
 ```
