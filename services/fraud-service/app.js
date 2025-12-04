@@ -16,6 +16,13 @@ async function processMessage(msg) {
     if (cpf === "12345678900") {
         status = "REPROVADO"
         motivo = "CPF já realizou compras suspeitas"
+        
+        await (await RabbitMQService.getInstance()).send('contact', { 
+                "clientFullName": dados.name,
+                "to": dados.email,
+                "subject": "Pedido Reprovado",
+                "text": `${dados.name}, seus dados não foram suficientes para realizar a compra :( por favor tente novamente!`,
+            })
     } else if (!cartao || cartao.length < 16) {
         status = "REPROVADO"
         motivo = "Cartão inválido"
